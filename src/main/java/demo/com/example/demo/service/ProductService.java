@@ -22,16 +22,16 @@ public class ProductService {
     public List<Product> getProducts(){
         return repository.findAll();
     }
-    public Product getProductById(int product_id){
-        return repository.findById(product_id).orElse(null);
+    public Product getProductById(int id){
+        return repository.findById(id).orElse(null);
     }
-    public Product getProductByName(String product_nama){
-        return repository.findByName(product_nama); 
+    public Product getProductByName(String nama){
+        return repository.findByName(nama); 
     }
 
-    public String deleteProduct(int product_id){
-        repository.deleteById(product_id);
-        return "product "+product_id+" have been remove!";
+    public String deleteProduct(int id){
+        repository.deleteById(id);
+        return "product "+id+" have been remove!";
     }
 
     public Product updateProduct(Product product){
