@@ -24,12 +24,6 @@ public class Product{
     private int product_stok;
     private int product_harga;
 
-    public int getProduct_Id;
-    public int getProduct_harga;
-    public String getProduct_nama;
-    public int getProduct_stok;
-    
-
     public String getProduct_nama() {
         return product_nama;
     }
@@ -37,7 +31,7 @@ public class Product{
         this.product_nama = product_nama;
     }
 
-    public double getProduct_harga() {
+    public int getProduct_harga() {
         return product_harga;
     }
     public void setProduct_harga(int product_harga) {
@@ -52,7 +46,7 @@ public class Product{
     }
 
     public Integer getProduct_Id() {
-        return null;
+        return product_id;
     }
 
     
