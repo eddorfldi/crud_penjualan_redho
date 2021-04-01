@@ -22,10 +22,10 @@ public class Product{
     private int product_id;
     private String product_nama;
     private int product_stok;
-    private double product_harga;
+    private int product_harga;
 
     public int getProduct_Id;
-    public Object getProduct_harga;
+    public int getProduct_harga;
     public String getProduct_nama;
     public int getProduct_stok;
     
@@ -40,7 +40,7 @@ public class Product{
     public double getProduct_harga() {
         return product_harga;
     }
-    public void setProduct_harga(double product_harga) {
+    public void setProduct_harga(int product_harga) {
         this.product_harga = product_harga;
     }
 

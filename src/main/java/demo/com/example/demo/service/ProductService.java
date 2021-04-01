@@ -38,7 +38,7 @@ public class ProductService {
         Product existingProduct=repository.findById(product.getProduct_Id()).orElse(null);
         existingProduct.setProduct_nama(product.getProduct_nama);
         existingProduct.setProduct_stok(product.getProduct_stok);
-        existingProduct.setProduct_harga((double)product.getProduct_harga);
+        existingProduct.setProduct_harga(product.getProduct_harga);
         return repository.save(existingProduct);
     }
 }
