@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @SpringBootApplication
-@ComponentScan
+@ComponentScan(basePackages={"src.main.java.demo.com.example.demo.controller"})
 @EnableAutoConfiguration
 public class DemoApplication {
 
