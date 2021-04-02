@@ -15,7 +15,7 @@ import demo.com.example.demo.entity.Product;
 public class ProductService {
     @Autowired 
     private ProductRepository repository;
-
+    
     public Product saveProduct(Product product){
         return repository.save(product);
     }

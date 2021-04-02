@@ -24,7 +24,7 @@ import demo.com.example.demo.service.ProductService;
 public class ProductController {
     
     @Autowired
-    private ProductService serviceProduct;
+    private ProductService ProductService;
 
     @GetMapping("/halo")
     public String sayHalo(){
@@ -33,36 +33,36 @@ public class ProductController {
 
     @PostMapping("/addProduct")
     public Product addProduct(@RequestBody Product product){
-        return serviceProduct.saveProduct(product);
+        return ProductService.saveProduct(product);
     }
 
     @PostMapping("/addProducts")
     public List<Product> addProducts(@RequestBody List<Product> products){
-        return serviceProduct.saveProducts(products);
+        return ProductService.saveProducts(products);
     }
 
     @GetMapping(value = "/produtcs")
     public List<Product> findAllProducts(){
-        return serviceProduct.getProducts();
+        return ProductService.getProducts();
     }
 
     @GetMapping("/product/{id}")
     public Product findProductById(@PathVariable int id){
-        return serviceProduct.getProductById(id);
+        return ProductService.getProductById(id);
     }
 
     @GetMapping("/product/{name}")
     public Product findProductByName(@PathVariable String nama){
-        return serviceProduct.getProductByName(nama);
+        return ProductService.getProductByName(nama);
     }
 
     @PutMapping("/update")
     public Product updateProduct(@RequestBody Product product){
-        return serviceProduct.updateProduct(product);
+        return ProductService.updateProduct(product);
     }
 
     @DeleteMapping("/delete/{id}")
     public String deleteProduct(@PathVariable int id){
-        return serviceProduct.deleteProduct(id);
+        return ProductService.deleteProduct(id);
     }
 }
