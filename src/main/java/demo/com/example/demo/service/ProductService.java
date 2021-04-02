@@ -1,6 +1,8 @@
 package demo.com.example.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,6 +10,8 @@ import demo.com.example.demo.repository.ProductRepository;
 import demo.com.example.demo.entity.Product;
 
 @Service
+@Controller
+@Repository
 public class ProductService {
     @Autowired 
     private ProductRepository repository;
