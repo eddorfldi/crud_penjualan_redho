@@ -9,9 +9,11 @@ import org.springframework.context.annotation.ComponentScan;
 // import org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 
+import demo.com.example.demo.controller.ProductController;
+
 @Configuration
 @SpringBootApplication
-@ComponentScan(basePackages={"src.main.java.demo.com.example.demo.controller"})
+@ComponentScan(basePackageClasses = ProductController.class)
 @EnableAutoConfiguration
 public class DemoApplication {
 
